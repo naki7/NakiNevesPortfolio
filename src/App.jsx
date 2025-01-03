@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import AboutMe from './AboutMe';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   const [currPage, setCurrPage] = useState('home');
@@ -16,6 +17,7 @@ function App() {
       {(currPage === 'aboutMe') && <AboutMe/>}
       {(currPage === 'portfolio') && <Portfolio/>}
       {(currPage === 'contact') && <Contact/>}
+      {(currPage != 'home') && <Footer/>}
     </>
   )
 }
