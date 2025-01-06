@@ -1,0 +1,17 @@
+@import './index.css';
+
+
+.Home h1{
+    font-size: 3rem;
+}
+
+.Home h1 span{
+    text-shadow: var(--beige) 2px 2px;
+}
+
+.ProfileImg{
+    height: 16rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

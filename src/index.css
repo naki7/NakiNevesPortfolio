@@ -1,15 +1,43 @@
+@font-face{
+  font-family: 'Carattere';
+  src: url('./fonts/Carattere-Regular.ttf');
+}
+@font-face {
+  font-family: 'Playwrite';
+  src: url('./fonts/PlaywriteAUSA-Regular.ttf');
+}
+
 :root {
   --blue: #293b6f;
   --brown: #3b2300;
   --beige: #af8f68;
   --black: #141010;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  max-width: 800px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 body{
   background-color: var(--blue);
 }
 
+h1{
+  font-family: 'Carattere', serif;
+  color: var(--brown);
+}
+
+p{
+  font-family: 'Playwrite', serif;
+}
+
 button{
   background-color: var(--brown);
   color: var(--beige);
+  font-family: 'Playwrite', serif;
 }
