@@ -29,11 +29,13 @@ body{
 
 h1{
   font-family: 'Carattere', serif;
-  color: var(--brown);
+  color: var(--beige);
+  text-shadow: var(--brown) 2px 2px;
 }
 
 p{
   font-family: 'Playwrite', serif;
+  font-weight: 600;
 }
 
 button{

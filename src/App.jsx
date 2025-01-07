@@ -10,10 +10,16 @@ import Footer from './Footer';
 function App() {
   const [currPage, setCurrPage] = useState('home');
 
+  const UpdatePage = (page) => {
+    if(!page){return}
+    setCurrPage(page)
+    // add history functionality using popstate
+  }
+
   return (
     <>
-      {(currPage === 'home') && <Home/>}
-      {(currPage != 'home') && <Navbar/>}
+      {(currPage === 'home') && <Home UpdatePage={UpdatePage}/>}
+      {(currPage != 'home') && <Navbar UpdatePage={UpdatePage}/>}
       {(currPage === 'aboutMe') && <AboutMe/>}
       {(currPage === 'portfolio') && <Portfolio/>}
       {(currPage === 'contact') && <Contact/>}

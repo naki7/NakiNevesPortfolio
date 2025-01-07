@@ -1,12 +1,35 @@
 @import './index.css';
 
+.Home{
+    padding: 0 1rem;
+}
 
 .Home h1{
     font-size: 3rem;
 }
 
 .Home h1 span{
-    text-shadow: var(--beige) 2px 2px;
+    text-shadow: var(--brown) 4px 4px;
+}
+
+.engineertxt{
+    font-weight: 650;
+    font-style: italic;
+    color: var(--beige);
+    text-shadow: var(--brown) 2px 2px;
+}
+
+.otterstxt{
+    font-weight: 550;
+    font-style: italic;
+}
+
+.Otter3{
+    position: fixed;
+    height: 10rem;
+    transform: rotate(-45deg);
+    left: 0.4rem;
+    bottom: 5rem;
 }
 
 .ProfileImg{
@@ -14,4 +37,10 @@
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+.Homebtns{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
 }
