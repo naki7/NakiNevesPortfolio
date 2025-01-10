@@ -1,5 +1,20 @@
 @import './index.css';
 
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    background-color: var(--brown);
+    animation-name: open;
+    animation-duration: 2s;
+}
+
+.navOpeners{
+    padding-left: 1rem;
+    color: var(--beige);
+}
+
+
 .navbar ul{
     padding: 0;
     display: flex;
@@ -18,4 +33,9 @@
     cursor: pointer;
     text-decoration: underline;
     background-color: var(--brown);
+}
+
+@keyframes open {
+    from {background-color: var(--brown);}
+    to {background-color: var(--blue);}
 }
