@@ -13,13 +13,14 @@ function App() {
   const UpdatePage = (page) => {
     if(!page){return}
     setCurrPage(page)
+    return console.log(currPage);
     // add history functionality using popstate
   }
 
   return (
     <>
       {(currPage === 'home') && <Home UpdatePage={UpdatePage}/>}
-      {(currPage != 'home') && <Navbar UpdatePage={UpdatePage}/>}
+      {(currPage != 'home') && <Navbar currPage={currPage} UpdatePage={UpdatePage}/>}
       {(currPage === 'aboutMe') && <AboutMe/>}
       {(currPage === 'portfolio') && <Portfolio/>}
       {(currPage === 'contact') && <Contact/>}

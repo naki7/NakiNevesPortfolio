@@ -8,7 +8,7 @@
 }
 
 :root {
-  --blue: #293b6f;
+  --blue: #3353ae;
   --brown: #3b2300;
   --beige: #af8f68;
   --black: #141010;
@@ -24,13 +24,14 @@
 }
 
 body{
+  margin: 0;
   background-color: var(--blue);
 }
 
 h1{
   font-family: 'Carattere', serif;
-  color: var(--beige);
-  text-shadow: var(--brown) 2px 2px;
+  color: var(--black);
+  text-shadow: var(--beige) 1px 1px;
 }
 
 p{
@@ -42,4 +43,18 @@ button{
   background-color: var(--brown);
   color: var(--beige);
   font-family: 'Playwrite', serif;
+  padding: 0.4rem 0.7rem;
+  border-radius: 1rem;
+}
+
+button:hover{
+  cursor: pointer;
+  text-shadow: var(--beige) 1px 1px;
+  border-style: dashed;
+  border-color: var(--blue);
+}
+
+li{
+  font-family: 'Playwrite', serif;
+  color: var(--beige);
 }

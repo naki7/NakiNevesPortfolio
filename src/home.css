@@ -1,7 +1,7 @@
 @import './index.css';
 
 .Home{
-    padding: 0 1rem;
+    padding: 0.4rem 2rem;
 }
 
 .Home h1{
@@ -9,6 +9,7 @@
 }
 
 .Home h1 span{
+    color: var(--beige);
     text-shadow: var(--brown) 4px 4px;
 }
 
@@ -22,6 +23,11 @@
 .otterstxt{
     font-weight: 550;
     font-style: italic;
+}
+
+.justOtters{
+    color: var(--beige);
+    text-shadow: var(--brown) 2px 2px;
 }
 
 .Otter3{
