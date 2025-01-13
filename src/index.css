@@ -1,3 +1,5 @@
+/* fonts */
+
 @font-face{
   font-family: 'Carattere';
   src: url('./fonts/Carattere-Regular.ttf');
@@ -6,6 +8,8 @@
   font-family: 'Playwrite';
   src: url('./fonts/PlaywriteAUSA-Regular.ttf');
 }
+
+/* colours */
 
 :root {
   --blue: #3353ae;
@@ -25,7 +29,7 @@
 
 body{
   margin: 0;
-  background-color: var(--blue);
+  background-color: var(--beige);
 }
 
 h1{
@@ -58,3 +62,9 @@ li{
   font-family: 'Playwrite', serif;
   color: var(--beige);
 }
+
+
+
+
+
+

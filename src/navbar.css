@@ -1,21 +1,72 @@
 @import './index.css';
 
 .navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     height: 4rem;
-    background-color: var(--brown);
-    animation-name: open;
-    animation-duration: 2s;
+    width: 100%;
 }
 
 .navOpeners{
+    z-index: 2;
     padding-left: 1rem;
     color: var(--beige);
 }
 
+.navOpeners:hover{
+    cursor: pointer;
+}
+
+.beigeBg{
+    width: 4rem;
+    background-color: var(--beige);
+}
+
+.navOpeners .fa-bars{
+    color: var(--brown);
+}
+
+.navOtter{
+    height: 7rem;
+    position: absolute;
+    top: -1rem;
+    right: 0.5rem;
+    rotate: 7Deg;
+}
+
+.otterDiv{
+    z-index: 0;
+    background-color: var(--blue);
+    height: 4rem;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 140%;
+    top: 0;
+}
+
+.animateOpen{
+    left: 0%;
+    animation: swimOpen 2s;
+}
+
+.animateClose{
+    left: -140%;
+    animation: swimClose 1.1s;
+}
+
+.uturnOtter{
+    rotate: -7Deg;
+    transform: scaleX(-1);
+}
+
+
 
 .navbar ul{
+    z-index: 1;
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -35,7 +86,21 @@
     background-color: var(--brown);
 }
 
-@keyframes open {
-    from {background-color: var(--brown);}
-    to {background-color: var(--blue);}
+
+@keyframes swimOpen {
+    from{
+        left: -140%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes swimClose {
+    from{
+        left: 0;
+    }
+    to{
+        left: -140%;
+    }
 }

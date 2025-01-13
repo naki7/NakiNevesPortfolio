@@ -11,8 +11,10 @@ export default function Navbar(props) {
   }
 
   return (
-    <div className='navbar'>
-      {/* add plus icon && burger menu icon with functionality to open and close navbar on small menus */}
+    <div className= {'navbar ' + (opener ? 'beigeBg' : 'blueBg')}>
+      <div className={'otterDiv' + (opener ? ' animateClose' : ' animateOpen')}>
+        <img className={'navOtter' + (opener ? ' uturnOtter' : '')} src='/Otters/Otter4.svg' alt='swimmingotter'/>
+      </div>
       <div className='navOpeners'>
         {opener && <i className="fa-solid fa-bars fa-2x" onClick={updateOpeners}></i>}
         {!opener && <i className="fa-solid fa-xmark fa-2x" onClick={updateOpeners}></i>}

@@ -2,6 +2,8 @@
 
 .Home{
     padding: 0.4rem 2rem;
+    background-color: var(--blue);
+    height: 100vh;
 }
 
 .Home h1{
@@ -31,7 +33,7 @@
 }
 
 .Otter3{
-    position: fixed;
+    position: absolute;
     height: 10rem;
     transform: rotate(-45deg);
     left: 0.4rem;
@@ -40,7 +42,7 @@
 
 .ProfileImg{
     height: 16rem;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
 }
