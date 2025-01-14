@@ -1,0 +1,27 @@
+@import './index.css';
+
+.Footer{
+    background-color: var(--blue);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.footline{
+    justify-self: center;
+    width: 90%;
+    height: 0.1rem;
+    background-color: var(--beige);
+}
+
+.footLinks i{
+    margin: 1.5rem 2rem 0;
+    color: var(--beige);
+}
+
+.footText{
+    padding-top: 0.2rem;
+    color: var(--beige);
+    font-size: 0.6rem;
+}
