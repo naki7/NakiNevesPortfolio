@@ -11,6 +11,7 @@ export default function AboutMe() {
         {/* add logic to scroll past the short story div */}
         <button className='SkipStory'>Skip to Stats</button>
       </div>
+      <PersonalStats/>
       <div className='ShortStory'>
         <h3 className='SectionTitle'>Who Am I</h3>
         <p>There are many things that make me the person that I am. I think who I am, both professionally and personally, is one and the same, while one inspires the other, the other motivates the one. I sometimes think I could write a whole novel about my life so far, but don’t worry about this being too long, this will be both as short and as sweet as me. While my life has been lived so far for a relatively short amount of time, it has also been extremely eventful and full of challenges that made me grow. The last part of that sentence, growth, is the first part of the ‘who’ I am that I would like to show.
@@ -28,7 +29,6 @@ export default function AboutMe() {
         This is why I love that saying from my grandmother as much as I do. To live life means to be like Sisyphus, endlessly pushing through a challenge day after day. Spending everyday learning what we can, and in learning we keep growing. And even though we will get to the end of the road not knowing everything, at least we can pass on our knowledge to those around us and help them grow. That is who I am, and who I want to be. I want to be the tree that reaches toward the sky, and in the process, I want to spread my seeds of knowledge, so that one day others can reach for that sky too.
         </p>
       </div>
-      <PersonalStats/>
     </div>
   )
 }

@@ -18,14 +18,14 @@ function App() {
   }
 
   return (
-    <>
+    <div className='app'>
       {(currPage === 'home') && <Home UpdatePage={UpdatePage}/>}
       {(currPage != 'home') && <Navbar currPage={currPage} UpdatePage={UpdatePage}/>}
       {(currPage === 'aboutMe') && <AboutMe/>}
       {(currPage === 'portfolio') && <Portfolio/>}
       {(currPage === 'contact') && <Contact/>}
       {(currPage != 'home') && <Footer/>}
-    </>
+    </div>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PersonalStats() {
     const stats = {
-        pastExp: {
+        'Past Experience': {
             born: [`Born in 1996`, `Johannesburg, South Africa`],
             highSchool: [`Finished High School in 2014`,`Matriculated from Woodlands International College`],
             degree: [`Completed my degree in 2019`,`Professional Bachelor of Arts in Film, Visual & Performing Arts – Majoring in Game Design, Digital Arts, and Interactive Writing`],
@@ -12,15 +12,44 @@ export default function PersonalStats() {
             moved: [`Moved in January 2023`,`relocated to Porto, Portugal with my citizenship, while continuing with my same work but as a ‘digital nomad’`],
             frontEnd: [`Started studying Front-end Engineering in March 2023 and I am still continuing to pursue further learning in the field`,`From March until September 2023 I studied and completed the Front-end Engineering Professional Course/Certification on Codecademy, I continued to work on minor personal projects until August 2024 when I started learning through SmolJames.com focusing on his roadmap to gain knowledge from a professional in the field, which also included completing his Javascript course on Udemy in September 2024`],
         },
-        profGoals: ['Full-time work in Web Development (with a focus on Front-end engineering)','Growing my Front-end engineering skills to know as much as possible','Expanding my knowledge to include both Back-end engineering, and Full-stack engineering'],
-        personalGoals: {
+        Skills: {
+            Coding: {
+                HTML: 5,
+                CSS: 4,
+                Javascript: 4,
+                React: 4,
+                GitHub: 3,
+                'Web Design': 4,
+                'Data Structures': 3,
+                Algorithms: 3,
+            },
+            Design: {
+                Photoshop: 4,
+                Illustrator: 2,
+                Krita: 3,
+                Layouts: 5,
+                'Product Design': 4,
+            },
+            Languages:{
+                English: 5,
+                Portuguese: 2,
+            },
+            Miscellaneous:{
+                'Microsoft Office': 5,
+                'Google Suite': 5,
+                Unity: 2,
+                'C#': 1,
+            }
+        },
+        'Professional Goals': ['Full-time work in Web Development (with a focus on Front-end engineering)','Growing my Front-end engineering skills to know as much as possible','Expanding my knowledge to include both Back-end engineering, and Full-stack engineering'],
+        'Personal Goals': {
             fitness: ['Improving fitness','I am currently trying to reach a 10km walk in an hour and a half'],
             strength: ['Gaining physical strength','I have started doing free weight training at home'],
             sewing: ['Learning sewing','My current projects include dungarees (overalls), and jackets'],
             reading: ['Reading more books','I read 10 books in 2024 and I would like to beat that number in 2025'],
             pet: ['Getting a dog','I have always loved dogs, and excluding the time since I moved to Porto, I have always lived with them, so I would like to get one of my own sometime soon'],
         },
-        interests: {
+        Interests: {
             games: [`Video games`,`Dead by Daylight and Marvel Rivals are my current go to games`],
             art: [`Painting`,`I just finished an acrylic on canvas painting to add to my collection and I’m planning on a digital piece to create soon`],
             gender: [`Playing with gender`,`I love painting my nails with a theme, and I’m learning makeup too`],
@@ -35,8 +64,28 @@ export default function PersonalStats() {
 
     //create a function to loop over stats objt to create the list of different personal stats
 
+    const StatsProducer = () =>{
+        if(!stats){return <p>No Stats To Show :(</p>}
+        const initialStats = Object.values(stats);
+        console.log(initialStats);
+        initialStats.map((stat, statIndex)=>{
+            console.log('this is stat - ', stat, statIndex)
+            return(
+            <ul key={statIndex}>
+                <p>stat</p>
+                {Object.values(stat).map((entry, entryIndex) =>{
+                    console.log('this is entry - ', entry, entryIndex)
+                    return (
+                        
+                        <li key={entryIndex}>{entry[0]}</li>
+                    )
+                })}
+            </ul>)
+        })
+    }
+
   return (
     
-    <div>PersonalStats</div>
+    <StatsProducer />
   )
 }
