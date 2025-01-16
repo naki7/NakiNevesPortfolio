@@ -68,20 +68,39 @@ export default function PersonalStats() {
         if(!stats){return <p>No Stats To Show :(</p>}
         const initialStats = Object.values(stats);
         console.log(initialStats);
-        initialStats.map((stat, statIndex)=>{
+        return(
+            <ul>
+            {initialStats.map((stat, statIndex)=>{
             console.log('this is stat - ', stat, statIndex)
+            const keys = Object.keys(stat);
+            <p>{keys[statIndex]}</p>
+            {if(Array.isArray(stat)){
+                console.log('this is an array stat - ', stat, statIndex)
+                return (
+                    stat.map((i, iIndex)=>{
+                        return(<li key={iIndex}>{i}</li>)
+                })
+            )
+            }else{
             return(
             <ul key={statIndex}>
-                <p>stat</p>
+                {console.log(keys[statIndex])}
+                <p>{keys[statIndex]}</p>
                 {Object.values(stat).map((entry, entryIndex) =>{
-                    console.log('this is entry - ', entry, entryIndex)
-                    return (
-                        
-                        <li key={entryIndex}>{entry[0]}</li>
+                    if(typeof entry === Array){
+                        console.log('this is entry - ', entry, entryIndex)
+                        return (
+                            entry.map((i, iIndex)=>{
+                                <li key={iIndex}>{i[iIndex]}</li>
+                        })
                     )
+                    }
+                    
                 })}
             </ul>)
-        })
+        }}})
+    }</ul>
+    )
     }
 
   return (

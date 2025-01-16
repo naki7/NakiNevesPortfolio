@@ -1,4 +1,5 @@
 import React from 'react'
+import './aboutMe.css'
 import PersonalStats from './PersonalStats'
 
 export default function AboutMe() {
@@ -11,7 +12,9 @@ export default function AboutMe() {
         {/* add logic to scroll past the short story div */}
         <button className='SkipStory'>Skip to Stats</button>
       </div>
-      <PersonalStats/>
+      <div className='StatsSection'>
+        <PersonalStats/>
+      </div>
       <div className='ShortStory'>
         <h3 className='SectionTitle'>Who Am I</h3>
         <p>There are many things that make me the person that I am. I think who I am, both professionally and personally, is one and the same, while one inspires the other, the other motivates the one. I sometimes think I could write a whole novel about my life so far, but don’t worry about this being too long, this will be both as short and as sweet as me. While my life has been lived so far for a relatively short amount of time, it has also been extremely eventful and full of challenges that made me grow. The last part of that sentence, growth, is the first part of the ‘who’ I am that I would like to show.
