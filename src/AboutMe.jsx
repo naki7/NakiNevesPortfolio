@@ -7,15 +7,15 @@ export default function AboutMe() {
     <div className='AboutMe'>
       <div className='HeroAboutMe'>
         <h2 className='PageTitle'>Most of everything About Me!</h2>
-        <p>short description</p>
+        <p>The first half of this page is a collection of some statistics and history about me that you can click through
+          <br/>While the second half is a short story about a part of Who I Am as a person</p>
         {/* add otter svgs */}
-        {/* add logic to scroll past the short story div */}
-        <button className='SkipStory'>Skip to Stats</button>
+        <a href='#short-story'><button className='SkipStory'>Skip to<br/>Short Story</button></a>
       </div>
       <div className='StatsSection'>
         <PersonalStats/>
       </div>
-      <div className='ShortStory'>
+      <div className='ShortStory' id='short-story'>
         <h3 className='SectionTitle'>Who Am I</h3>
         <p>There are many things that make me the person that I am. I think who I am, both professionally and personally, is one and the same, while one inspires the other, the other motivates the one. I sometimes think I could write a whole novel about my life so far, but don’t worry about this being too long, this will be both as short and as sweet as me. While my life has been lived so far for a relatively short amount of time, it has also been extremely eventful and full of challenges that made me grow. The last part of that sentence, growth, is the first part of the ‘who’ I am that I would like to show.
         <br/>

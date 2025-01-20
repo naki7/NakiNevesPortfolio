@@ -25,6 +25,7 @@
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -38,9 +39,20 @@ h1{
   text-shadow: var(--beige) 1px 1px;
 }
 
-p{
+h2{
+  font-family: 'Carattere', serif;
+  color: var(--black);
+  font-size: 3rem;
+}
+
+h3{
   font-family: 'Playwrite', serif;
   font-weight: 600;
+}
+
+p{
+  font-family: 'Playwrite', serif;
+  font-weight: 500;
 }
 
 button{
@@ -60,7 +72,7 @@ button:hover{
 
 li{
   font-family: 'Playwrite', serif;
-  color: var(--brown);
+  color: var(--beige);
 }
 
 

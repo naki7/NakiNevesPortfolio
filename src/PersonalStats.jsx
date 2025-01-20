@@ -92,7 +92,7 @@ export default function PersonalStats() {
                 const profArr = newArr.map((value, index) =>{
                     return(
                         <>
-                            <p key={index + 0}>{value[0]}</p>
+                            <h3 key={index + 0}>{value[0]}</h3>
                             <p key={index + 1}>{value[1]}</p>
                         </>
                     )
@@ -105,55 +105,42 @@ export default function PersonalStats() {
 
     const SkillHandler = (skillSet) =>{
         const titleKeys = skillSet[Object.keys(skillSet)[0]];
-        let titleNames = [];
+        let fullComponent = []
 
-        for(let i = 0; i < (Object.keys(titleKeys).length); i++){
-            titleNames.push(Object.keys(titleKeys)[i]);
-            
-            const skillsArr = titleKeys[Object.keys(titleKeys)[i]];
-            console.log(skillsArr);
-            let skillNames = [];
-            let skillRating = [];
+        console.log(titleKeys)
 
-            return(
-                <>
-                    <p className='title'>{titleNames[i]}</p>
-                    {/* {for(let j = 0; j < (Object.keys(skillsArr).length); j++){
-                        skillNames.push(Object.keys(skillsArr)[j]);
-                        skillRating.push(Object.values(skillsArr)[j]);
-                    }
+        Object.keys(titleKeys).map((key, index)=>{
+            console.log('key is ' + key + ' ,index is ' + index)
+            fullComponent.push(<h3>{key}</h3>);
 
-                    console.log(skillNames);
-                    console.log(skillRating); */}
+            Object.entries(titleKeys[key]).map((skill, i)=>{
+                console.log('skill is ' + skill);
+                fullComponent.push(<p>{skill[0]}</p>);
+                let stars = [];
+                for(let j = 0; j < skill[1]; j++){
+                    stars.push(<i className="fa-solid fa-star"></i>)
+                }
+                fullComponent.push(<div className='stars'>{stars}</div>);
+            })
+        })
 
-                    
-                </>
-            )
+        console.log(fullComponent);
 
-
-            // const SkillsElement = skillsArr.map((value, index) =>{
-            //     return(
-            //         <>
-            //             <p key={index + i}>{titleNames[i]}</p>
-            //             <p key={index + i + 0}>{value[0]}</p>
-            //             <p key={index + i + 1}>{value[1]}</p>
-            //         </>
-            //     )
-            // } )
-            
-        }
-
-        console.log(titleKeys);
-        return(<h1>skills!</h1>)
+        return(<>{fullComponent}</>)
     }
     
 
   return (
     <>
+        <h2>Past Experience</h2>
         <ArrayHandler PastExp={PastExp} />
+        <h2>Skills</h2>
         <SkillHandler Skills={Skills} />
+        <h2>Professional Goals</h2>
         <ArrayHandler ProfGoals={ProfGoals} />
+        <h2>Personal Goals</h2>
         <ArrayHandler PersGoals={PersGoals} />
+        <h2>Interests</h2>
         <ArrayHandler Interests={Interests} />
     </>
   )
