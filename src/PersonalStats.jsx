@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './personalStats.css';
 
 export default function PersonalStats() {
+
+    const [activeKey, setActiveKey] = useState();
 
     //Set up of multiple variables holding each statistic
     const PastExp = [[`Born in 1996`, `Johannesburg, South Africa`],
@@ -63,7 +66,14 @@ export default function PersonalStats() {
 
     
 
-
+    const handleActiveKey = (val) =>{
+        if(!val){return}
+        if(val === activeKey){
+            setActiveKey('');
+        }else{
+            setActiveKey(val);
+        }
+    }
 
     //create a function to loop over stats objts to create the list of different personal stats
 
@@ -75,7 +85,6 @@ export default function PersonalStats() {
         const newArr = arr[Object.keys(arr)[0]];
         //if the next level is already an array with its first child being a string then we want map over the array create elements for those strings
         if(((typeof newArr[Object.keys(newArr)[0]])) === 'string'){
-            //creating a variable to avoid manipulating original object/array
             const profArr = newArr.map((value, index) =>{
                 return(
                     <p key={index}>{value}</p>
@@ -92,8 +101,11 @@ export default function PersonalStats() {
                 const profArr = newArr.map((value, index) =>{
                     return(
                         <>
-                            <h3 key={index + 0}>{value[0]}</h3>
-                            <p key={index + 1}>{value[1]}</p>
+                            <div className='titleDiv'>
+                                <h3 className='title' onClick={()=>{handleActiveKey(value[0])}} key={index + 0}>{value[0]}</h3>
+                                <i className={"chevron fa-solid fa-chevron-right" + (activeKey === value[0] ? ' clicked' : '')}></i>
+                            </div>
+                            <p className={(activeKey === value[0] ? 'description clicked' : 'description notClicked')} key={index + 1}>{value[1]}</p>
                         </>
                     )
                 } )

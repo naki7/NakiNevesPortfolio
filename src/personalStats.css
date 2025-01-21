@@ -1,0 +1,30 @@
+
+.titleDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chevron{
+    padding-left: 1rem;
+}
+
+.chevron.clicked{
+    transform: rotate(90Deg);
+    animation: rotateChev 0.7s ease-in both;
+}
+
+
+.notClicked{
+    display: none;
+    visibility: hidden;
+}
+
+@keyframes rotateChev {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+}
