@@ -45,7 +45,7 @@ export default function PersonalStats() {
         }
     }
 
-    const ProfGoals = ['Full-time work in Web Development (with a focus on Front-end engineering)','Growing my Front-end engineering skills to know as much as possible','Expanding my knowledge to include both Back-end engineering, and Full-stack engineering']
+    const ProfGoals = ['- Full-time work in Web Development (with a focus on Front-end engineering)','- Growing my Front-end engineering skills to know as much as possible','- Expanding my knowledge to include both Back-end engineering, and Full-stack engineering']
 
     const PersGoals = [['Improving fitness','I am currently trying to reach a 10km walk in an hour and a half'],
             ['Gaining physical strength','I have started doing free weight training at home'],
@@ -87,7 +87,7 @@ export default function PersonalStats() {
         if(((typeof newArr[Object.keys(newArr)[0]])) === 'string'){
             const profArr = newArr.map((value, index) =>{
                 return(
-                    <p key={index}>{value}</p>
+                    <p className='profGoalsPtags' key={index}>{value}</p>
                 )
             } )
             //returning a group of paragraphs
@@ -100,13 +100,13 @@ export default function PersonalStats() {
                 //mapping over each individual array within the object and then creating an element for each of the 2 values, each with inidividualized keys
                 const profArr = newArr.map((value, index) =>{
                     return(
-                        <>
-                            <div className='titleDiv'>
-                                <h3 className='title' onClick={()=>{handleActiveKey(value[0])}} key={index + 0}>{value[0]}</h3>
+                        <div className={(activeKey === value[0]) ? 'divClicked' : ''}>
+                            <div className='titleDiv' onClick={()=>{handleActiveKey(value[0])}} key={index + 0}>
+                                <h3 className='title'>{value[0]}</h3>
                                 <i className={"chevron fa-solid fa-chevron-right" + (activeKey === value[0] ? ' clicked' : '')}></i>
                             </div>
                             <p className={(activeKey === value[0] ? 'description clicked' : 'description notClicked')} key={index + 1}>{value[1]}</p>
-                        </>
+                        </div>
                     )
                 } )
                 //returning a group of paragraphs
@@ -127,33 +127,37 @@ export default function PersonalStats() {
 
             Object.entries(titleKeys[key]).map((skill, i)=>{
                 console.log('skill is ' + skill);
-                fullComponent.push(<p>{skill[0]}</p>);
+                let skillArray = [];
+                skillArray.push(<p>{skill[0]}</p>);
                 let stars = [];
                 for(let j = 0; j < skill[1]; j++){
                     stars.push(<i className="fa-solid fa-star"></i>)
                 }
-                fullComponent.push(<div className='stars'>{stars}</div>);
+                skillArray.push(<div className='stars'>{stars}</div>);
+                fullComponent.push(<div className='skillArray'>{skillArray}</div>);
             })
         })
 
         console.log(fullComponent);
 
-        return(<>{fullComponent}</>)
+        return(<div className='skillClass'>{fullComponent}</div>)
     }
     
 
   return (
     <>
-        <h2>Past Experience</h2>
+        <h2 className='titleMrgn'>Past Experience</h2>
         <ArrayHandler PastExp={PastExp} />
-        <h2>Skills</h2>
+        <h2 className='skillTitle titleMrgn'>Skills</h2>
         <SkillHandler Skills={Skills} />
-        <h2>Professional Goals</h2>
+        <h2 className='profTitle titleMrgn'>Professional Goals</h2>
         <ArrayHandler ProfGoals={ProfGoals} />
-        <h2>Personal Goals</h2>
+        <h2 className='titleMrgn'>Personal Goals</h2>
         <ArrayHandler PersGoals={PersGoals} />
-        <h2>Interests</h2>
-        <ArrayHandler Interests={Interests} />
+        <div className='interestsDiv'>
+            <h2 className='interestsTitle titleMrgn'>Interests</h2>
+            <ArrayHandler Interests={Interests} />
+        </div>
     </>
   )
 }

@@ -1,8 +1,39 @@
+@import './index.css';
+
+.titleMrgn{
+    margin-bottom: 1rem;
+}
 
 .titleDiv{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    margin: 1.5rem;
+}
+
+.title{
+    margin: 0;
+}
+
+.divClicked{
+    color: var(--beige);
+    border-radius: 1rem;
+    border-color: var(--brown);
+    border-width: 0.1rem;
+    border-style: dashed;
+    background-color: var(--blue);
+    animation: changeToBlue 1s ease-in;
+    margin-bottom: 2rem;
+}
+
+.divClicked .titleDiv{
+    margin: 0.5rem;
+}
+
+.divClicked h3, .divClicked p{
+    color: var(--beige);
+    animation: changeToBlue 1s ease-in;
 }
 
 .chevron{
@@ -20,11 +51,118 @@
     visibility: hidden;
 }
 
+.description{
+    padding: 0 1rem;
+}
+
+.skillClass{
+    background-color: var(--blue);
+    color: var(--beige);
+    padding: 2rem;
+    margin: -2rem;
+}
+
+.skillClass h3{
+    color: var(--brown);
+    font-size: 1.5rem;
+}
+
+.skillClass p{
+    color: var(--brown);
+    font-weight: 600;
+}
+
+.skillArray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars{
+    padding-left: 1rem;
+}
+
+.skillTitle{
+    background-color: var(--blue);
+    color: var(--beige);
+    padding: 2rem 2rem 0rem;
+    margin: 0 -2rem;
+}
+
+.profTitle{
+    padding-top: 2rem;
+}
+
+.profGoalsPtags{
+    padding: 0.3rem 0;
+    margin: 0.5rem 0;
+    color: var(--beige);
+    border-radius: 1rem;
+    border-color: var(--brown);
+    border-width: 0.1rem;
+    border-style: dashed;
+    background-color: var(--blue);
+}
+
+.interestsTitle{
+    color: var(--beige);
+    margin: 1rem 0;
+}
+
+.interestsDiv{
+    color: var(--beige);
+    background-color: var(--blue);
+    padding: 1rem 2rem 2rem;
+    margin: 0 -2rem;
+}
+
+.interestsDiv h3, .interestsDiv p{
+    color: var(--beige);
+}
+
+.interestsDiv .divClicked{
+    color: var(--brown);
+    border-radius: 1rem;
+    border-color: var(--brown);
+    border-width: 0.1rem;
+    border-style: dashed;
+    background-color: var(--beige);
+    animation: changeToBeige 1s ease-in;
+}
+
+.interestsDiv .divClicked h3, .interestsDiv .divClicked p{
+    color: var(--brown);
+    background-color: var(--beige);
+    animation: changeToBeige 1s ease-in;
+}
+
 @keyframes rotateChev {
     0% {
       transform: rotate(0);
     }
     100% {
       transform: rotate(90deg);
+    }
+}
+
+@keyframes changeToBlue {
+    0% {
+      background-color: var(--beige);
+      color: var(--black);
+    }
+    100% {
+      background-color: var(--blue);
+      color: var(--beige);
+    }
+}
+
+@keyframes changeToBeige {
+    0% {
+      background-color: var(--blue);
+      color: var(--beige);
+    }
+    100% {
+      background-color: var(--beige);
+      color: var(--brown);
     }
 }

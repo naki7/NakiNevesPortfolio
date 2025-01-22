@@ -41,18 +41,20 @@ h1{
 
 h2{
   font-family: 'Carattere', serif;
-  color: var(--black);
+  color: var(--brown);
   font-size: 3rem;
 }
 
 h3{
   font-family: 'Playwrite', serif;
   font-weight: 600;
+  color: var(--black);
 }
 
 p{
   font-family: 'Playwrite', serif;
   font-weight: 500;
+  color: var(--black);
 }
 
 button{
