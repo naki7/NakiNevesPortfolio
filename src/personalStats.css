@@ -63,12 +63,12 @@
 }
 
 .skillClass h3{
-    color: var(--brown);
+    color: var(--beige);
     font-size: 1.5rem;
 }
 
 .skillClass p{
-    color: var(--brown);
+    color: var(--beige);
     font-weight: 600;
 }
 
@@ -98,10 +98,10 @@
     margin: 0.5rem 0;
     color: var(--beige);
     border-radius: 1rem;
-    border-color: var(--brown);
+    border-color: var(--beige);
     border-width: 0.1rem;
     border-style: dashed;
-    background-color: var(--blue);
+    background-color: var(--brown);
 }
 
 .interestsTitle{
