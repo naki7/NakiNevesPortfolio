@@ -116,30 +116,37 @@ export default function PersonalStats() {
     }
 
     const SkillHandler = (skillSet) =>{
+        //accessing the keys that are inside the skill array in order to skip through one level of the object list
         const titleKeys = skillSet[Object.keys(skillSet)[0]];
+        //initializing an empty array so that it can have html elements pushed into it
         let fullComponent = []
 
-        console.log(titleKeys)
-
+        //mapping into the first set of keys in order to gain access to the first level keys - 'coding', 'design', 'languages', and 'miscellaneous'
         Object.keys(titleKeys).map((key, index)=>{
-            console.log('key is ' + key + ' ,index is ' + index)
+            //wrapping the key being mapped over in a h3 element (as it is a title) and then pushing it into the fullComponent stack
             fullComponent.push(<h3>{key}</h3>);
 
+            //gaining access to the entries within the titleKeys array but this time at the specific key that is currently being mapped (this is done in the first mapping to keep children elements stacked under their respective parent)
             Object.entries(titleKeys[key]).map((skill, i)=>{
-                console.log('skill is ' + skill);
+                //initializing an array so that each individual skill can have its own stack to fill before being pushed into fullComponent
                 let skillArray = [];
+                //pushing the first value in the array into the skill array as this contains the name of the skill
                 skillArray.push(<p>{skill[0]}</p>);
+                //initializing an array that can be filled with multiple icons before pushing them on to the skillArray
                 let stars = [];
+                //getting the size of the value stored in the second value of the array so that it can produce star icon elements for the number associated with each skill
                 for(let j = 0; j < skill[1]; j++){
+                    //filling the stars array first with icons
                     stars.push(<i className="fa-solid fa-star"></i>)
                 }
+                //wrapping the stars in their own div and adding a class to style it later, then pushing it into the skillArray to come after the skill's name
                 skillArray.push(<div className='stars'>{stars}</div>);
+                //wrapping the skillArray in another div with class name of skillArray, thus allowing each individual skill and star pairing to exist in their own div, and then pushing that div into the fullComponent, so that it is stacked under the skill section title
                 fullComponent.push(<div className='skillArray'>{skillArray}</div>);
             })
         })
 
-        console.log(fullComponent);
-
+        //once all the keys have been mapped over (including the individual skill entries too), the fullComponent now contains multiple seperate divs in an array, this is then wrapped in another final div and then returned so that it can be rendered once called upon
         return(<div className='skillClass'>{fullComponent}</div>)
     }
     
@@ -154,6 +161,7 @@ export default function PersonalStats() {
         <ArrayHandler ProfGoals={ProfGoals} />
         <h2 className='titleMrgn'>Personal Goals</h2>
         <ArrayHandler PersGoals={PersGoals} />
+        {/* the interests elements and title are wrapped in their own div as to allow different styling to be placed just on this section*/}
         <div className='interestsDiv'>
             <h2 className='interestsTitle titleMrgn'>Interests</h2>
             <ArrayHandler Interests={Interests} />
