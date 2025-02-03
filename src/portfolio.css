@@ -4,6 +4,18 @@
     padding: 0 2rem 6.1rem ;
 }
 
-.Portfolio img{
+.Portfolio div{
+    padding: 2rem 0;
+}
+
+.title{
+    padding-bottom: 1rem;
+}
+
+.codingDiv img{
+    max-height: 25vh;
+}
+
+.artDiv img{
     max-height: 17vh;
 }

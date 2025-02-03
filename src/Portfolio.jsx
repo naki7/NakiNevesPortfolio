@@ -4,64 +4,56 @@ import { Coding, Art } from './portfolioObjects.js';
 
 export default function Portfolio() {
 
-  const PortfolioHandler = () =>{
-    let entirePortfolio = [];
+  const PortfolioSectionCreator = (obj) =>{
+    for(let i = 0; i < Object.keys(obj).length; i++){
+      const objKeys = obj[Object.keys(obj)[i]];
+      const arrValues = Object.values(objKeys);
 
-    if(Coding){
-      let codePortfolio = [];
-      const codingKeys = Coding[Object.keys(Coding)[0]];
-      // console.log(Object.keys(codingKeys).length);
-      for(let i = 0; i < Object.keys(codingKeys).length; i++){
-        // console.log(Object.values(codingKeys)[i]);
-        let currentValue = Object.values(codingKeys)[i];
-        switch(i){
-          case 0:
-            codePortfolio.push(<h3>{currentValue}</h3>);
-            break;
-          case 1:
-            codePortfolio.push(<img src={currentValue} alt={Object.values(codingKeys)[0]}/>);
-            break;
-          case 2:
-            codePortfolio.push(<p>{currentValue}</p>);
-            break;
-            case 3:
-              codePortfolio.push(<a href={currentValue} target='_blank'><i className="fa-solid fa-up-right-from-square"></i></a>);
-              break;
-        }
+      if(Object.keys(arrValues[i]).length === 4){
+        const codingElement = Object.values(arrValues).map((value, index) =>{
+          return(
+            <div className='codingDiv' key={index}>
+              <h3 className='title'>{Object.values(value)[0]}</h3>
+              <img src={Object.values(value)[1]} alt={Object.values(value)[0]}/>
+              <p className='description'>{Object.values(value)[2]}</p>
+              <a href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><i className='fa-solid fa-up-right-from-square'></i></a>
+            </div>
+          )
+        })
+      return(codingElement);
       }
-      entirePortfolio.push(<div className='codingDiv'>{codePortfolio}</div>);
-    }
-    if(Art){
-      let artPortfolio = []
-      console.log(Object.keys(Art).length)
-      for(let i = 0; i < Object.keys(Art).length; i++){
-        const artKeys = Art[Object.keys(Art)[i]]
-        console.log(artKeys)
-        for(let j = 0; j < Object.keys(artKeys).length; j++){
-          let currentValue = Object.values(artKeys)[j];
-          console.log( i, j, currentValue, Object.keys(artKeys))
-          switch(j){
-            case 0:
-              artPortfolio.push(<h3>{currentValue}</h3>);
-              break;
-            case 1:
-            case 2:
-            case 4:
-            case 5:
-              artPortfolio.push(<img src={currentValue} alt={Object.values(artKeys)[0]}/>);
-              break;
-            case 3:
-              artPortfolio.push(<p>{currentValue}</p>);
-              break;
-          }
-        }
+
+      if(Object.keys(arrValues[i]).length === 6){
+        const artElement = Object.values(objKeys).map((value, index) =>{
+          return(
+            <div className='artDiv' key={index}>
+              <h3 className='title'>{Object.values(value)[0]}</h3>
+              <img src={Object.values(value)[1]} alt={Object.values(value)[0]}/>
+              <img src={Object.values(value)[2]} alt={Object.values(value)[0]}/>
+              <p className='description'>{Object.values(value)[3]}</p>
+              <img src={Object.values(value)[4]} alt={Object.values(value)[0]}/>
+              <img src={Object.values(value)[5]} alt={Object.values(value)[0]}/>
+            </div>
+          )
+        })
+      return(artElement);
       }
-      entirePortfolio.push(<div className='artDiv'>{artPortfolio}</div>);
     }
-    return(<div className='Portfolio'>{entirePortfolio}</div>)
   }
 
   return (
-    <PortfolioHandler/>
+    <div className='Portfolio'>
+      <div className='portfolioHero'>
+        <h2>Welcome to my Showcase</h2>
+        <img src='/Otters/Otter2.svg' alt='Otter swimming to the left'/>
+        <p>These are a few selected coding & art projects I've done over the years</p>
+      </div>
+      <div className='codingComponent'>
+        <PortfolioSectionCreator Coding={Coding}/>
+      </div>
+      <div className='artComponent'>
+        <PortfolioSectionCreator Art={Art}/>
+      </div>
+    </div>
   )
 }
