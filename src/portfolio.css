@@ -1,11 +1,37 @@
-
+@import './index.css';
 
 .Portfolio{
     padding: 0 2rem 6.1rem ;
 }
 
-.Portfolio div{
-    padding: 2rem 0;
+.Portfolio h2{
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.portfolioHero{
+    background-color: var(--blue);
+    padding: 2rem 1rem 1rem;
+    margin: 0 -2rem 2rem;
+    display: grid;
+    grid-template-columns: 55vw auto;
+}
+
+.portfolioHero h2{
+    text-shadow: var(--beige) 0.1rem 0.1rem;
+}
+
+.portfolioHero img{
+    max-width: 35vw;
+}
+
+.portfolioHero p{
+    grid-column: 1 / span 2 ;
+}
+
+.codingDiv,
+.artDiv{
+    padding-bottom: 4rem;
 }
 
 .title{
@@ -15,6 +41,28 @@
 .codingDiv img{
     max-height: 25vh;
 }
+
+.websiteLink{
+    display: flex;
+    place-items: center;
+    place-content: center;
+    width: fit-content;
+    border-bottom: solid;
+}
+
+.codingDiv a:nth-child(4){
+    text-decoration: inherit;
+    color: inherit;
+    display: flex;
+    width: 100px;
+    justify-self: center;
+}
+
+.websiteLink p{
+    padding-right: 0.5rem;
+    margin: 0;
+}
+
 
 .artDiv img{
     max-height: 17vh;

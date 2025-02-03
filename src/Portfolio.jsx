@@ -14,9 +14,9 @@ export default function Portfolio() {
           return(
             <div className='codingDiv' key={index}>
               <h3 className='title'>{Object.values(value)[0]}</h3>
-              <img src={Object.values(value)[1]} alt={Object.values(value)[0]}/>
+              <a href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><img src={Object.values(value)[1]} alt={Object.values(value)[0]}/></a>
               <p className='description'>{Object.values(value)[2]}</p>
-              <a href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><i className='fa-solid fa-up-right-from-square'></i></a>
+              <a href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><div className='websiteLink'><p>Visit Me</p><i className='fa-solid fa-up-right-from-square'></i></div></a>
             </div>
           )
         })
@@ -49,9 +49,11 @@ export default function Portfolio() {
         <p>These are a few selected coding & art projects I've done over the years</p>
       </div>
       <div className='codingComponent'>
+        <h2>Coding</h2>
         <PortfolioSectionCreator Coding={Coding}/>
       </div>
       <div className='artComponent'>
+        <h2>Art</h2>
         <PortfolioSectionCreator Art={Art}/>
       </div>
     </div>
