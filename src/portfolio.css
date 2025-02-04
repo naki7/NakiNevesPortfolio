@@ -12,12 +12,13 @@
 .portfolioHero{
     background-color: var(--blue);
     padding: 2rem 1rem 1rem;
-    margin: 0 -2rem 2rem;
+    margin: 0 -2rem 1rem;
     display: grid;
     grid-template-columns: 55vw auto;
 }
 
 .portfolioHero h2{
+    color: var(--black);
     text-shadow: var(--beige) 0.1rem 0.1rem;
 }
 
@@ -29,13 +30,35 @@
     grid-column: 1 / span 2 ;
 }
 
-.codingDiv,
-.artDiv{
-    padding-bottom: 4rem;
+
+.header{
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+    justify-self: center;
+    align-items: center;
+}
+
+.header .chevron{
+    padding-left: 0.5rem;
+    padding-bottom: 0.75rem;
+}
+
+.codingComponent{
+    padding-bottom: 0rem;
+}
+
+.artComponent{
+    padding-top: 3rem;
 }
 
 .title{
-    padding-bottom: 1rem;
+    cursor: pointer;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .codingDiv img{
@@ -50,12 +73,13 @@
     border-bottom: solid;
 }
 
-.codingDiv a:nth-child(4){
+.websiteAnchor{
     text-decoration: inherit;
     color: inherit;
     display: flex;
     width: 100px;
     justify-self: center;
+    padding-bottom: 1rem;
 }
 
 .websiteLink p{
@@ -64,6 +88,97 @@
 }
 
 
+
+.sectionHighlight{
+    background-color: var(--brown);
+    color: var(--beige);
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: -1rem -2rem;
+}
+
+.sectionHighlight h2{
+    color: var(--beige);
+}
+
+.imgPair{
+    display: flex;
+    justify-content: space-around;
+}
+
 .artDiv img{
     max-height: 17vh;
+}
+
+
+
+.chevronActive{
+    transform: rotate(90Deg);
+    animation: rotateChev 0.7s ease-in both;
+}
+
+.sectionHidden{
+    visibility: hidden;
+    display: none;
+    height: 0%;
+}
+
+.sectionShow{
+    display: block;
+    height: 100%;
+    animation: showFade 1s ease-in;
+}
+
+
+.highlight{
+    background-color: var(--brown);
+    color: var(--beige);
+    padding: 1rem 2rem;
+    margin: 0 -2rem;
+    animation: showFade 1s ease-in;
+}
+
+.highlight h3{
+    color: var(--beige);
+}
+
+.projectHidden{
+    visibility: hidden;
+    display: none;
+    height: 0%;
+}
+
+.projectShow{
+    display: block;
+    height: 100%;
+    animation: showFade 1s ease-in;
+}
+
+.codingDiv .projectShow{
+    color: var(--beige);
+    background-color: var(--blue);
+    padding: 1rem 2rem 0.5rem;
+    margin: 0rem -2rem -2rem;
+}
+
+.artDiv .projectShow{
+    background-color: var(--blue);
+    padding: 1rem 2rem;
+    margin: 0 -2rem;
+}
+
+.projectShow p{
+    color: var(--beige);
+}
+
+
+@keyframes showFade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
 }

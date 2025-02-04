@@ -11,6 +11,7 @@
 }
 
 .PageTitle{
+    color: var(--black);
     text-shadow: var(--beige) 0.1rem 0.1rem;
 }
 
