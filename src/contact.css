@@ -1,0 +1,81 @@
+@import './index.css';
+
+.contactPage{
+    padding: 0 2rem 7rem;
+}
+
+.contactHero{
+    background-color: var(--blue);
+    padding: 1rem 2rem;
+    margin: 0 -2rem -1rem;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+}
+
+.contactHero h2{
+    color: var(--black);
+    text-shadow: var(--beige) 0.1rem 0.1rem;
+    grid-column: 1 / span 2 ;
+}
+
+.contactHero img{
+    margin: -4.2rem;
+    padding-top: 2rem;
+    height: 15rem;
+}
+
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 1rem;
+}
+
+.contactForm label{
+    font-family: 'Playwrite', serif;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 2.5rem;
+}
+
+.contactForm input,
+.contactForm textarea{
+    background-color: inherit;
+    border-radius: 1rem;
+    border: 0.2rem solid var(--brown);
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0;
+    font-family: 'Playwrite', serif;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder{
+    color: var(--brown);
+    font-family: 'Playwrite', serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.contactForm textarea{
+    resize: none;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus{
+    outline: 0.1rem solid var(--blue);
+    background: radial-gradient(ellipse at 50% 50%, rgba(175, 143, 104, 1) 45%, rgba(51, 83, 174, 1) 100%);
+}
+
+.contactForm input:hover,
+.contactForm textarea:hover{
+    outline: 0.1rem solid var(--blue);
+}
+
+.inputContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
