@@ -48,6 +48,7 @@
     font-family: 'Playwrite', serif;
     font-weight: 500;
     color: var(--black);
+    transition: all 0.5s ease-out;
 }
 
 .contactForm input::placeholder,
@@ -60,12 +61,18 @@
 
 .contactForm textarea{
     resize: none;
+    height: 8rem;
+}
+
+.contactForm textarea::placeholder{
+    font-size: 0.85rem;
 }
 
 .contactForm input:focus,
 .contactForm textarea:focus{
     outline: 0.1rem solid var(--blue);
-    background: radial-gradient(ellipse at 50% 50%, rgba(175, 143, 104, 1) 45%, rgba(51, 83, 174, 1) 100%);
+    background: radial-gradient(ellipse at 50% 50%, rgba(175, 143, 104, 1) 45%, rgba(51, 83, 174, 0.5) 100%);
+    transition: all 0.5s ease-in;
 }
 
 .contactForm input:hover,
@@ -77,5 +84,95 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.submit{
+    padding: 2rem;
+    width: fit-content;
+    align-self: center;
+    background-color: var(--blue) !important;
+    color: var(--beige) !important;
+}
+
+.submit:hover{
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.submit:focus{
+    background: none !important;
+    background-color: var(--brown)!important;
+    font-weight: 600;
+}
+
+.submitDiv{
+    position: relative;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin: 0 -2rem;
+}
+
+.emailOtter{
+    z-index: -1;
+    position: absolute;
+    left: -4rem;
+    height: 4rem;
+    background: radial-gradient(circle at 55% 50%, rgba(51, 83, 174, 1) 10%, rgba(175, 143, 104, 1) 60%);
+}
+
+.otterSending{
+    animation: otterSwim 1.5s infinite;
+}
+
+@keyframes otterSwim {
+    0%{
+        top: -1rem;
+        left: -4rem;
+        transform: rotate(-50deg);
+    }
+    40%{
+        left: 2rem;
+        transform: rotate(-15deg);
+    }
+    70%{
+        top: 0;
+        left: 10rem;
+        transform: rotate(0deg);
+    }
+    100%{
+        top: 2rem;
+        left: 24rem;
+        transform: rotate(15deg);
+    }
+}
+
+
+
+.emailSentDiv{
+    background-color: var(--brown);
+    padding: 2rem 2rem 2rem;
+    margin: 1rem -2rem -0.85rem;
+}
+
+.emailSentDiv h2{
+    color: var(--beige);
+    text-shadow: var(--black) 0.3rem 0.3rem;
+    margin: 1rem 0;
+}
+
+.emailSentDiv p{
+    color: var(--beige);
+}
+
+.emailSentDiv button{
+    margin-top: 1rem;
+    background-color: var(--blue);
+    border-color: var(--beige);
+    font-weight: 600;
+}
+
+.emailSentDiv button:hover{
+    border-color: var(--beige);
+    text-shadow: var(--black) 1px 1px;
 }
 

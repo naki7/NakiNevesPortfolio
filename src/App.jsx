@@ -13,7 +13,6 @@ function App() {
   const UpdatePage = (page) => {
     if(!page){return}
     setCurrPage(page)
-    return console.log(currPage);
     // add history functionality using popstate
   }
 

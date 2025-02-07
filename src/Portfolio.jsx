@@ -34,11 +34,16 @@ export default function Portfolio() {
 
 
   const PortfolioSectionCreator = (obj) =>{
+    //initializing looping over the base object
     for(let i = 0; i < Object.keys(obj).length; i++){
+      //gets the key for each object entry
       const objKeys = obj[Object.keys(obj)[i]];
+      //creates a new array with all of the values from the key above
       const arrValues = Object.values(objKeys);
 
+      //check to see if the legth of the array is the same as the length of each coding project
       if(Object.keys(arrValues[i]).length === 4){
+        //mapping over the values that are contained within each array (key being 'nakis snakis' and the values in that being img links, site links, the description and the title of the project)
         const codingElement = Object.values(arrValues).map((value, index) =>{
           return(
             <div className='codingDiv' key={index}>
@@ -49,7 +54,7 @@ export default function Portfolio() {
               <div className={(project === Object.values(value)[0]) ? ' projectShow' : ' projectHidden'}>
                 <a href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><img src={Object.values(value)[1]} alt={Object.values(value)[0]}/></a>
                 <p className='description'>{Object.values(value)[2]}</p>
-                <a className='websiteAnchor' href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><div className='websiteLink'><p>Visit Me</p><i className='fa-solid fa-up-right-from-square'></i></div></a>
+                <a className='websiteAnchor' href={Object.values(value)[3]} target='_blank' title={Object.values(value)[0]}><div className='websiteLink'><p>Visit Site</p><i className='fa-solid fa-up-right-from-square'></i></div></a>
               </div>
             </div>
           )
@@ -57,8 +62,10 @@ export default function Portfolio() {
       return(codingElement);
       }
 
+      //check to see if the legth of the array is the same as the length of each art project
       if(Object.keys(arrValues[i]).length === 6){
         const artElement = Object.values(objKeys).map((value, index) =>{
+          //mapping over the values that are contained within each array (key being 'graphic design' and the values in that being 4 img links, the description and the title of the project)
           return(
             <div className='artDiv' key={index}>
               <div className={'title' + ((project === Object.values(value)[0]) ? ' highlight' : ' ')}>

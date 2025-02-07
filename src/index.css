@@ -63,6 +63,7 @@ button{
   font-family: 'Playwrite', serif;
   padding: 0.4rem 0.7rem;
   border-radius: 1rem;
+  border-style: solid;
 }
 
 button:hover{
