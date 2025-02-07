@@ -131,4 +131,37 @@ This next step will focus on the creation of the Portfolio page and has 3 main e
 The Portfolio component is being called in this way as it allows for the objects to include more portfolio pieces as they are completed in the future and the component will automatically render them as if they were always there.
 
 # Struggles Encountered in Step 5
-// none as yet to be anticipated.
+Some issues arose with creating the component that would loop over the objects to create the portfolio sections
+- originally i used one component call and dircetly used the objects that were imported, and then i checked if the main key of those objects was either 'coding' or 'art'. however while this functioned it had 2 main issues:
+    - The code lacked the ease of adding classnames and divs around elements as using an array and pushing single elements into them, prevented useful situatuion where a div needed to wrap around some elements but not others in that same for loop
+    - The code also looked messy and complicated (more so than it need to/should be) the new resolution was a lot cleaner
+- I resolved this struggle by creating a unction component that did take an argument which was passed into it directly when it was called for rendering.
+    - I then rather used a for loop to break down the object into its individual objects as both objects required that.
+    - Then the new object was checked to see if it had 4 objects in it (which would make it the coding object), or if it had 6 objects (making it the art object)
+    - those objects where then mapped over based on their values, in which then they were appropriately extracted using value[ index ] which created a situation where i had access to all 4/6 values and thus could setup divs and classname appropriately for a better structure
+
+
+# Sixth Steps
+The main issue with the contact me page is that I have never implemented an email address contact form before and therefore had to do some research on how to achieve what was required
+- The first thing I learnt is that React and Email.js (an email server api) run well together and are greatly tested and optimized so this is what I decided to go with
+- Following these Email.js steps was easy to implement but I did have troubles with actually insalling email.js into my project ()
+- The rest of the contact me page was quite simple to implement as it used knowledge i already had
+    - This included creating an html form
+    - using conditionals to only render the form when it wasn't filled in and sent but refreshing it once it was needed again through a div that was conditionally rendered when the email had been sent
+    - animating an otter swimming when the button was clicked and other general styling
+    - and lastly also the creation of a hero section just to make the page homogenous with the rest of the site
+- The only other step I needed to create which I wasn't sure about was email validation
+
+# Sturggles Encountered in Step 6
+
+- The struggle I had with installing the email.js api was a mixture of my node.js being slightly out of date and the terminal command i was using to install it had actually depricated which kept throwing errors I had to learn to resolve. by using //npm install emailjs instead of npm install --save emailjs/browser, I was able to get the api installed
+- Email validation was a struggle as I had never done it before, however i found a simple guide that took me through the basics of setting up a regex and running the inputted email value against that regex, and then simply returning true if it matched and false if it didnt
+    - I then added that to the sendEmail function so that it would prevent emails from being sent when the email that came through was invalid
+    - I also added required to all the input fields to make sure that people would not send black emails which would then waste the monthly email.js tokens
+
+# Seventh Step
+This step will be mostly simple as it is just going through each page component and adding in media queries so that the site will function and look appropriate on all different screen sizes
+- I have already setup and taken note of where I have used flex and where I have used grids as when it comes to those sections, I will simply need to change the values related to those two to make them scale responsively
+- I have also set up some styling in the index.css that impacts the full site, which means adding media queries to that file will make it quicker to make changes site wide in terms of responsivity
+
+# No Struggles Encountered in Step 7 so far
