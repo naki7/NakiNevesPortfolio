@@ -3,8 +3,13 @@ import './aboutMe.css'
 import PersonalStats from './PersonalStats'
 
 export default function AboutMe() {
+
+  const scrollToTop = () =>{
+    window.scrollTo(0,0);
+  }
   return (
     <div className='AboutMe'>
+      <i className="fa-solid fa-arrow-up-long fa-2xl scrollArrow" onClick={()=>{scrollToTop()}}></i>
       <div className='HeroAboutMe'>
         <h2 className='PageTitle'>Most of everything About Me!</h2>
         <p>The first half of this page is a collection of some statistics and history about me that you can click through

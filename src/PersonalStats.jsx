@@ -100,7 +100,7 @@ export default function PersonalStats() {
                 //mapping over each individual array within the object and then creating an element for each of the 2 values, each with inidividualized keys
                 const profArr = newArr.map((value, index) =>{
                     return(
-                        <div key={index} className={(activeKey === value[0]) ? 'divClicked' : ''}>
+                        <div key={index} className={'divContainer' + ((activeKey === value[0]) ? ' divClicked' : '')}>
                             <div className='titleDiv' onClick={()=>{handleActiveKey(value[0])}} key={index + 0}>
                                 <h3 className='title'>{value[0]}</h3>
                                 <i className={"chevron fa-solid fa-chevron-right" + (activeKey === value[0] ? ' clicked' : '')}></i>

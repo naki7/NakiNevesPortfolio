@@ -4,11 +4,18 @@ import './navbar.css';
 export default function Navbar(props) {
   const {currPage, UpdatePage} = props;
 
-  const [opener, setOpener] = useState(true);
+  const [opener, setOpener] = useState(false);
 
   const updateOpeners = () => {
     return setOpener(!opener);
   }
+
+  window.addEventListener("scroll", () => {
+    if(!opener){
+      setOpener(true);
+    }
+    return
+  })
 
   return (
     <div className= {'navbar ' + (opener ? 'beigeBg' : 'blueBg')}>

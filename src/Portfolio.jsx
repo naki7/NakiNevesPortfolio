@@ -28,7 +28,6 @@ export default function Portfolio() {
     } else{
       setProject(null);
     }
-    console.log(project);
   }
 
 

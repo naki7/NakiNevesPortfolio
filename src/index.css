@@ -55,6 +55,7 @@ p{
   font-family: 'Playwrite', serif;
   font-weight: 500;
   color: var(--black);
+  font-size: 1rem;
 }
 
 button{
@@ -81,5 +82,41 @@ li{
 
 
 
+@media screen and (min-width: 700px){
+  :root{
+    max-width: 2000px;
+  }
 
+  h2{
+    font-size: 3.5rem;
+  }
+
+  h3{
+    font-size: 1.4rem;
+  }
+
+  p{
+    font-size: 1.05rem;
+  }
+
+  button{
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+  h2{
+    font-size: 4rem;
+  }
+
+  h3{
+    font-size: 1.7rem;
+  }
+
+  p{
+    font-size: 1.2rem;
+  }
+}
 

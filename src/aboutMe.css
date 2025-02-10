@@ -29,6 +29,27 @@
     margin-left: -3rem;
 }
 
+.scrollArrow{
+    color: var(--beige);
+    background-color: var(--brown);
+    position: fixed;
+    place-content: center;
+    bottom: 20px;
+    right: 10px;
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 2rem;
+    border: 0.2rem solid var(--beige);
+    transition: all 0.7s ease;
+}
+
+.scrollArrow:hover{
+    cursor: pointer;
+    color: var(--blue);
+    background-color: var(--beige);
+    border-color: var(--blue);
+}
+
 
 .SectionTitle{
     margin: 2rem 0 1rem;
@@ -67,4 +88,60 @@
 .storyEndP span{
     font-weight: 600;
     text-shadow: var(--black) 0.03rem 0.03rem;
+}
+
+
+
+@media screen and (min-width: 690px) {
+    .otterBtnDiv img{
+        margin-top: -3rem;
+    }
+    
+    .HeroAboutMe{
+        padding: 2rem 6rem;
+    }
+
+    .SectionTitle{
+        margin-top: 3rem;
+    }
+
+    .storyBasic{
+        margin: 2rem 3rem;
+    }
+    .storyClrChange{
+        padding: 2rem 5rem;
+        margin: 0 -2rem;
+    }
+    .storyEndP{
+        padding: 4rem 5rem;
+        margin: 0 -2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .storyBasic{
+        margin: 3rem 5rem;
+    }
+    .storyClrChange{
+        padding: 3rem 7rem;
+        margin: 0 -2rem;
+    }
+    .storyEndP{
+        padding: 4rem 7rem;
+        margin: 0 -2rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .storyBasic{
+        margin: 3rem 7rem;
+    }
+    .storyClrChange{
+        padding: 3rem 9rem;
+        margin: 0 -2rem;
+    }
+    .storyEndP{
+        padding: 4rem 9rem;
+        margin: 0 -2rem;
+    }
 }

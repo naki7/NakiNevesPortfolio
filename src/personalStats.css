@@ -10,6 +10,14 @@
     justify-content: center;
     cursor: pointer;
     margin: 1.5rem;
+    max-width: 450px;
+    justify-self: center;
+}
+
+.divContainer{
+    max-width: 600px;
+    justify-self: center;
+    padding: 0.5rem 1rem;
 }
 
 .title{
@@ -94,7 +102,7 @@
 }
 
 .profGoalsPtags{
-    padding: 0.3rem 0;
+    padding: 0.4rem 0.6rem;
     margin: 0.5rem 0;
     color: var(--beige);
     border-radius: 1rem;
@@ -102,6 +110,8 @@
     border-width: 0.1rem;
     border-style: dashed;
     background-color: var(--brown);
+    max-width: 520px;
+    justify-self: center;
 }
 
 .interestsTitle{
@@ -164,5 +174,18 @@
     100% {
       background-color: var(--beige);
       color: var(--brown);
+    }
+}
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .divContainer{
+        max-width: 800px;
+    }
+
+    .profGoalsPtags{
+        max-width: 650px;
     }
 }

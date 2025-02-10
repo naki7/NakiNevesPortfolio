@@ -4,6 +4,9 @@
     padding: 0.01rem 2rem;
     background-color: var(--blue);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Home h1{
@@ -32,23 +35,95 @@
     text-shadow: var(--brown) 2px 2px;
 }
 
-.Otter3{
+.homeImgs{
     position: absolute;
+    width: 90vw;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 0;
+}
+
+.Otter3{
     height: 10rem;
     transform: rotate(-45deg);
-    left: 0.4rem;
-    bottom: 5rem;
+    margin-right: -5.4rem;
 }
 
 .ProfileImg{
     height: 16rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 .Homebtns{
+    z-index: 1;
     padding-top: 1rem;
+    min-width: 300px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:460px) {
+    .Home h1{
+        padding-top: 1.3rem;
+    }
+    .Otter3{
+        margin-right: 0;
+    }
+    .Homebtns{
+        min-width: 350px;
+    }
+}
+
+@media screen and (min-width:550px) {
+    .Otter3{
+        height: 12rem;
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .Home{
+        padding: 0.01rem 4rem 0;
+    }
+
+    .Home h1{
+        max-width: 475px;
+    }
+
+    .Homebtns{
+        padding-top: 2.75rem;
+        min-width: 400px;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .homeImgs{
+        justify-content: space-between;
+        max-width: none;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .Otter3{
+        padding-top: 2rem;
+        height: 18rem;
+    }
+
+    .ProfileImg{
+        height: 19rem;
+        align-self: end;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .Home h1{
+        font-size: 3.5rem;
+    }
+
+    .ProfileImg{
+        height: 22rem;
+    }
 }

@@ -12,7 +12,8 @@ function App() {
 
   const UpdatePage = (page) => {
     if(!page){return}
-    setCurrPage(page)
+    setCurrPage(page);
+    window.scrollTo(0, 0);
     // add history functionality using popstate
   }
 
