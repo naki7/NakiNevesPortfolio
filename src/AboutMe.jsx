@@ -12,8 +12,8 @@ export default function AboutMe() {
       <i className="fa-solid fa-arrow-up-long fa-2xl scrollArrow" onClick={()=>{scrollToTop()}}></i>
       <div className='HeroAboutMe'>
         <h2 className='PageTitle'>Most of everything About Me!</h2>
-        <p>The first half of this page is a collection of some statistics and history about me that you can click through
-          <br/>While the second half is a short story about a part of Who I Am as a person</p>
+        <p>The first half of this page is a collection of some statistics about me that you can click through
+          <br/>While the second half is a short story about a part of 'Who I Am' as a person</p>
         <div className='otterBtnDiv'>
           <img src='/Otters/Otter5.svg' alt='Otter looking forward'/>
           <a href='#short-story'><button className='SkipStory'>Skip to<br/>Short Story</button></a>

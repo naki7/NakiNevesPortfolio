@@ -1,6 +1,7 @@
 @import './index.css';
 
 .Footer{
+    z-index: 1;
     background-color: var(--blue);
     position: absolute;
     bottom: 0;

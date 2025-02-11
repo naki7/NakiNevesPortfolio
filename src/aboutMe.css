@@ -30,6 +30,7 @@
 }
 
 .scrollArrow{
+    z-index: 2;
     color: var(--beige);
     background-color: var(--brown);
     position: fixed;
