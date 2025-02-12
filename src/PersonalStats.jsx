@@ -50,11 +50,11 @@ export default function PersonalStats() {
     const PersGoals = [['Improving fitness','I am currently trying to reach a 30km hike around the Serras de Valongo'],
             ['Gaining physical strength','I have started doing free weight training at home'],
             ['Learning sewing','I recently finished making dungarees (overalls), and I am working on a jacket'],
-            ['Reading more books','I read 10 books in 2024 and I would like to beat that number in 2025'],
+            ['Reading more books','I read 10 books in 2024, and I would like to beat that number in 2025'],
             ['Getting a dog','I have always loved dogs, and excluding the time since I moved to Porto, I have always lived with them']]
 
     const Interests = [
-        [`Video games`,`Dead by Daylight and Marvel Rivals are my current go to games`],
+        [`Video games`,`Dead by Daylight and Marvel Rivals are my current go-to games`],
         [`Painting`,`I just finished an acrylic on canvas painting to add to my collection and I’m planning on a digital piece to create soon`],
         [`Playing with gender`,`I love painting my nails with a theme, and I’m learning makeup too`],
         [`Building Ikea Furniture`,`I built a cupboard, TV stand and a workout/storage bench in a month. And I loved every second of it!`],
@@ -62,7 +62,7 @@ export default function PersonalStats() {
         [`Traveling`,`I recently ticked London, Manchester, and Barcelona off my bucket list within a year. Berlin, Glasgow and Dublin are some of the cities that are still on my bucket list`],
         [`Dancing & singing`,`It is mostly to myself while cooking and cleaning but I am trying to organize contemporary dance classes and some beginner voice training exercises to do at home`],
         [`TV shows & movies`,`While the list of both is long, I do tend to enjoy things related to horror, superheroes, the supernatural world, a dash of romance, and animations`],
-        [`Other media`,`While I don’t have social media (I deleted all my accounts in January 2022), I do love watching Youtube (especially all 4 Smosh channels, as well as podcasts about mental health/queer topics). I also enjoy watching Twitch (I currently moderate for a community that I’ve become good friends with, as they are a loving and accepting group along with being fun to hang with in the evenings)`]]
+        [`Other media`,`While I don’t have social media (I deleted all my accounts in January 2022), I do love watching YouTube (especially all 4 Smosh channels, as well as podcasts about mental health/queer topics). I also enjoy watching Twitch (I currently moderate for a community that I’ve become good friends with, as they are a loving and accepting group along with being fun to hang with in the evenings)`]]
 
     
 

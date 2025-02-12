@@ -21,7 +21,6 @@ export default function Portfolio() {
   }
 
   const projectHandler = (name) =>{
-    console.log(name);
     if(!name){return}
     if(project != name){
       setProject(name);
