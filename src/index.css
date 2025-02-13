@@ -79,6 +79,9 @@ li{
   color: var(--beige);
 }
 
+.descriptionHighlight{
+  text-shadow: var(--beige) 0.05rem 0.05rem;
+}
 
 
 

@@ -94,7 +94,7 @@ export default function Portfolio() {
       <div className='portfolioHero'>
         <h2>Welcome to my Showcase</h2>
         <img src='/Otters/Otter2.svg' alt='Otter swimming to the left'/>
-        <p>These are a few selected coding & art projects I've done over the years</p>
+        <p>These are a few selected <span className='descriptionHighlight'>coding & art projects</span> I've done over the years</p>
       </div>
       <div className='codingComponent'>
         <div className={'header' + ((section === 'coding') ? ' sectionHighlight' : ' ')} onClick={() => {sectionHandler('coding')}}>

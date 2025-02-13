@@ -59,7 +59,7 @@ export default function Contact() {
     <div className='contactPage'>
       <div className='contactHero'>
         <h2>Feel free to reach out to join the Romp!</h2>
-        <p>Fun fact: a romp is the collective noun for a group of otters. And that is because they play joyfully!</p>
+        <p>Fun fact: a <span className='descriptionHighlight'>romp</span> is the collective noun for a <span className='descriptionHighlight'>group of otters</span>. And that is because they <span className='descriptionHighlight'>play joyfully</span>!</p>
         <img src='/Otters/Otter1.svg' alt='an otter turning around'/>
       </div>
       {(formStatus === 'not sent') && <form className='contactForm' ref={form} onSubmit={sendEmail}>

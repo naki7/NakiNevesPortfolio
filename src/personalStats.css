@@ -31,7 +31,7 @@
     border-width: 0.1rem;
     border-style: dashed;
     background-color: var(--blue);
-    animation: changeToBlue 1s ease-in;
+    animation: changeToBlue 0.7s ease-in;
     margin-bottom: 2rem;
 }
 
@@ -41,7 +41,7 @@
 
 .divClicked h3, .divClicked p{
     color: var(--beige);
-    animation: changeToBlue 1s ease-in;
+    animation: changeToBlue 0.7s ease-in;
 }
 
 .chevron{
@@ -137,13 +137,13 @@
     border-width: 0.1rem;
     border-style: dashed;
     background-color: var(--beige);
-    animation: changeToBeige 1s ease-in;
+    animation: changeToBeige 0.7s ease-in;
 }
 
 .interestsDiv .divClicked h3, .interestsDiv .divClicked p{
     color: var(--brown);
     background-color: var(--beige);
-    animation: changeToBeige 1s ease-in;
+    animation: changeToBeige 0.7s ease-in;
 }
 
 @keyframes rotateChev {

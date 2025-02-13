@@ -10,6 +10,7 @@
     margin: 0 -2rem -1rem;
     display: grid;
     grid-template-columns: 40vw 40vw;
+    justify-content: center;
 }
 
 .contactHero h2{
@@ -19,9 +20,10 @@
 }
 
 .contactHero img{
-    margin: -4.2rem;
+    margin: -1.7rem;
     padding-top: 2rem;
     height: 15rem;
+    justify-self: end;
 }
 
 
@@ -61,7 +63,7 @@
 
 .contactForm textarea{
     resize: none;
-    height: 8rem;
+    height: 10rem;
 }
 
 .contactForm textarea::placeholder{
@@ -108,6 +110,7 @@
 .submitDiv{
     position: relative;
     overflow: hidden;
+    width: 100%;
     padding: 0 2rem;
     margin: 0 -2rem;
 }
@@ -121,10 +124,10 @@
 }
 
 .otterSending{
-    animation: otterSwim 1.5s infinite;
+    animation: otterSwimSScreen 1.5s infinite;
 }
 
-@keyframes otterSwim {
+@keyframes otterSwimSScreen {
     0%{
         top: -1rem;
         left: -4rem;
@@ -142,6 +145,72 @@
     100%{
         top: 2rem;
         left: 24rem;
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes otterSwimMScreen {
+    0%{
+        top: -1rem;
+        left: -4rem;
+        transform: rotate(-50deg);
+    }
+    40%{
+        left: 10rem;
+        transform: rotate(-15deg);
+    }
+    70%{
+        top: 0;
+        left: 20rem;
+        transform: rotate(0deg);
+    }
+    100%{
+        top: 2rem;
+        left: 45rem;
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes otterSwimLScreen {
+    0%{
+        top: -1rem;
+        left: -4rem;
+        transform: rotate(-50deg);
+    }
+    40%{
+        left: 20rem;
+        transform: rotate(-15deg);
+    }
+    70%{
+        top: 0;
+        left: 30rem;
+        transform: rotate(0deg);
+    }
+    100%{
+        top: 2rem;
+        left: 60rem;
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes otterSwimXLScreen {
+    0%{
+        top: -1rem;
+        left: -4rem;
+        transform: rotate(-50deg);
+    }
+    40%{
+        left: 20rem;
+        transform: rotate(-15deg);
+    }
+    70%{
+        top: 0;
+        left: 40rem;
+        transform: rotate(0deg);
+    }
+    100%{
+        top: 2rem;
+        left: 70rem;
         transform: rotate(15deg);
     }
 }
@@ -176,3 +245,167 @@
     text-shadow: var(--black) 1px 1px;
 }
 
+
+
+@media screen and (min-width: 400px) {
+    .contactForm{
+        padding: 2rem 1rem 1rem;
+    }
+
+    .submitDiv{
+        width: 112%;
+        margin-left: -4rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .contactForm{
+        padding: 2rem 2rem 1rem;
+    }
+
+    .contactForm textarea,
+    .inputContainer{
+        align-self: center;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    
+    .otterSending{
+        animation: otterSwimMScreen 1.5s infinite;
+    }
+
+
+    
+    .emailSentDiv h2{
+        margin: 2rem 0;
+    }
+    .emailSentDiv button{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .submitDiv{
+        width: 110%;
+    }
+
+    
+    .emailSentDiv h2{
+        margin: 1.8rem 0;
+    }
+    .emailSentDiv button{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .contactHero{
+        grid-template-columns: 30vw 30vw;
+    }
+    
+    .contactHero img{
+        margin: -4.5rem -1rem;
+        padding-bottom: 3rem;
+    }
+
+    .contactForm{
+        padding: 3rem 2rem 1.5rem;
+    }
+
+    .contactForm textarea,
+    .inputContainer{
+        max-width: 500px;
+    }
+
+    .contactForm label{
+        font-size: 1.2rem;
+    }
+
+    .inputContainer input{
+        height: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .contactForm input::placeholder{
+        font-size: 0.8rem;
+    }
+
+    .contactForm textarea::placeholder{
+        font-size: 0.95rem;
+    }
+
+    .contactForm textarea{
+        font-size: 1rem;
+    }
+
+    .submit{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .submitDiv{
+        width: 109%;
+    }
+
+    .otterSending{
+        animation: otterSwimLScreen 1.5s infinite;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .submitDiv{
+        width: 107%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .contactForm{
+        padding: 4rem 2rem 2rem;
+    }
+
+    .contactForm label{
+        font-size: 1.4rem;
+    }
+
+    .inputContainer input{
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .contactForm input::placeholder{
+        font-size: 0.9rem;
+    }
+
+    .contactForm textarea::placeholder{
+        font-size: 1.1rem;
+    }
+
+    .contactForm textarea{
+        max-width: 600px;
+        height: 15rem;
+        font-size: 1.1rem;
+    }
+
+    .submit{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1060px) {
+    .submitDiv{
+        width: 105%;
+    }
+
+    .otterSending{
+        animation: otterSwimXLScreen 1.5s infinite;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .submitDiv{
+        width: 102%;
+    }
+}
