@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from 'emailjs-com';
 import './contact.css';
 
 export default function Contact() {
