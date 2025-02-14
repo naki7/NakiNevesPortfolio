@@ -7,6 +7,11 @@ export default function AboutMe() {
   const scrollToTop = () =>{
     window.scrollTo(0,0);
   }
+
+  const handleScrollDown = () =>{
+    document.getElementById('short-story').scrollIntoView();
+  }
+
   return (
     <div className='AboutMe'>
       <i className="fa-solid fa-arrow-up-long fa-2xl scrollArrow" onClick={()=>{scrollToTop()}}></i>
@@ -16,7 +21,7 @@ export default function AboutMe() {
           <br/>While the second half is a <span className='descriptionHighlight'>short story about a part of 'Who I Am'</span> as a person</p>
         <div className='otterBtnDiv'>
           <img src='/Otters/Otter5.svg' alt='Otter looking forward'/>
-          <a href='#short-story'><button className='SkipStory'>Skip to<br/>Short Story</button></a>
+          <button className='SkipStory' onClick={() =>{handleScrollDown()}}>Skip to<br/>Short Story</button>
         </div>
       </div>
       <div className='StatsSection'>
