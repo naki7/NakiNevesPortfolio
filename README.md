@@ -164,4 +164,6 @@ This step will be mostly simple as it is just going through each page component 
 - I have already setup and taken note of where I have used flex and where I have used grids as when it comes to those sections, I will simply need to change the values related to those two to make them scale responsively
 - I have also set up some styling in the index.css that impacts the full site, which means adding media queries to that file will make it quicker to make changes site wide in terms of responsivity
 
-# No Struggles Encountered in Step 7 so far
+# No Struggles Encountered in Step 7
+
+# Site was successfully launched on the 14th of Feb 2025
