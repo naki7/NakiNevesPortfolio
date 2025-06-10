@@ -7,6 +7,12 @@ const Coding = {
         description: 'The goal was to create the front-end of an artificial online macaron store. I challenged myself to create a site that was visually appealing with all the common functionalities of an e-commerce site. I pushed myself by using React states for an interactive experience. Such states included the number of items in the cart, what flavors the items were, and how much they cost. Another functional challenge was making a modal screen that displayed the products, allowed the quantities to be changed, and had the functionalities for purchasing or emptying the cart. The last parts to be coded were media queries that made the website fully scalable for different screen sizes.',
         url: 'https://nakis-snakis.netlify.app/',
     },
+    dailySmiley : {
+        title: `Daily Smiley`,
+        imgSrc: '/WebDevProjects/DailySmileyImg.jpg',
+        description: 'This project involved multiple goals and learning moments. From the functional side of this site, the purpose was to create a calendar structure that is interactive. This allows users to input their moods for the day so that over time they could have complete site to look back at that would show how their mood has changed over extended periods of time. From the coding side of the project my primary goals were to learn how to use Firebase as a backend service, Next.js as the primary coding frame work as it allows for a better page routing for this type of project, and lastly to use TailwindCSS as the primary styling framework. I struggled most due to minor coding issues on the Firebase server, but these were eventually resolved.',
+        url: 'https://https://dailysmiley.netlify.app/',
+    },
 }
 
 const Art = {
