@@ -11,7 +11,7 @@ const Coding = {
         title: `Daily Smiley`,
         imgSrc: '/WebDevProjects/DailySmileyImg.jpg',
         description: 'This project involved multiple goals and learning moments. From the functional side of this site, the purpose was to create a calendar structure that is interactive. This allows users to input their moods for the day so that over time they could have complete site to look back at that would show how their mood has changed over extended periods of time. From the coding side of the project my primary goals were to learn how to use Firebase as a backend service, Next.js as the primary coding frame work as it allows for a better page routing for this type of project, and lastly to use TailwindCSS as the primary styling framework. I struggled most due to minor coding issues on the Firebase server, but these were eventually resolved.',
-        url: 'https://https://dailysmiley.netlify.app/',
+        url: 'https://dailysmiley.netlify.app/',
     },
 }
 
